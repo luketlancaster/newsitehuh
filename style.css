@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .parallax {
@@ -30,27 +30,44 @@ body {
   left: 0;
 }
 
-.parallax__layer--content {
-  display: inline;
-}
-
-a.parallax__layer--content {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-p.parallax__layer--content {
-  position: absolute;
-  right: 5px;
-  margin: 0 10px;
-}
-
 .parallax__layer--base {
   transform: translateZ(0);
   background-color: darkslategrey;
 }
 .parallax__layer--back {
-  padding: 9vh 0;
   transform: translateZ(-1px) scale(2);
+}
+
+.back {
+  z-index: -1;
+}
+
+a.parallax__layer--content {
+  color: white;
+  text-decoration: none;
+}
+
+
+@media (min-width: 800px) {
+
+  body {
+    font-size: 1.25em;
+  }
+
+  .parallax__layer--content {
+    display: inline;
+  }
+
+  a.parallax__layer--content {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  p.parallax__layer--content {
+    position: absolute;
+    right: 5px;
+    margin: 0 10px;
+  }
+
 }
